@@ -7,31 +7,31 @@ import java.util.Scanner;
 
 import hashmapDataBase.AccountBalanceHashMapDataBase;
 
-public class DepositOperation {
+public class WithdrawOperation {
 
-	public void executingDepositOperation() {
+	public void executingWithdrawOperation() {
 
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
 		AccountBalanceHashMapDataBase objectToAccountBalance = new AccountBalanceHashMapDataBase();
 
-		String cpfKey;
-		Double depositValue;
+		String cpfHashMapKey;
+		Double withdrawValue;
 
 		try {
 
-			System.out.println("--------" + "DEPOSIT OPERATION AREA" + "--------");
+			System.out.println("--------" + "WITHDRAW OPERATION AREA" + "--------");
 
 			System.out.println("Insert Client CPF: ");
-			cpfKey = sc.next();
+			cpfHashMapKey = sc.next();
 
-			System.out.println("DepositValue: ");
-			depositValue = sc.nextDouble();
+			System.out.println("Withdraw Value: ");
+			withdrawValue = sc.nextDouble();
 
-			objectToAccountBalance.depositAccountBalance(cpfKey, depositValue);
+			objectToAccountBalance.withdrawAccountBalanceHashMap(cpfHashMapKey, withdrawValue);
 
-			System.out.println("--------" + "DEPOSIT SUCESSFULL" + "--------");
+			System.out.println("--------" + "WITHDRAW SUCESSFULL" + "--------");
 
 		}
 
